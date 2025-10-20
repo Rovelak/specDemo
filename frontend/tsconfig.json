@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "ES2022"],
+    "jsx": "preserve",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    // Removed ignoreDeprecations due to ts-jest TS5103 error; revisit when upgrading to TS 7
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "allowJs": true,
+    "incremental": true
+  },
+  "include": ["src", "next-env.d.ts", "fixtures"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "inception",
+    "title": "Inception",
+    "releaseYear": 2010,
+    "posterUrl": "/posters/inception.jpg",
+    "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology...",
+    "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
+    "reviews": [
+      { "id": "r1", "author": "Alice", "rating": 5, "text": "Brilliant." }
+    ]
+  },
+  {
+    "id": "matrix",
+    "title": "The Matrix",
+    "releaseYear": 1999,
+    "posterUrl": "/posters/matrix.jpg",
+    "synopsis": "A computer hacker learns about the true nature of his reality...",
+    "cast": ["Keanu Reeves", "Laurence Fishburne"],
+    "reviews": [
+      { "id": "r2", "author": "Bob", "rating": 5, "text": "Revolutionary." }
+    ]
+  }
+]
