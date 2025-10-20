@@ -1,4 +1,4 @@
-import { validateMoviesFixture, movies } from "../lib/fixtures";
+import { validateMoviesFixture, movies } from "../lib/fixtures.js";
 
 describe("fixtures validation", () => {
   it("should validate movies fixture with no issues", () => {

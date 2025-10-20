@@ -3,8 +3,10 @@
     "target": "ES2022",
     "lib": ["DOM", "ES2022"],
     "jsx": "preserve",
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "ignoreDeprecations": "6.0",
+    "allowImportingTsExtensions": true,
     // Removed ignoreDeprecations due to ts-jest TS5103 error; revisit when upgrading to TS 7
     "strict": true,
     "esModuleInterop": true,

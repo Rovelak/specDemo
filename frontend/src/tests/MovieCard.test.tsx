@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import MovieCard from "../components/MovieCard";
+import MovieCard from "../components/MovieCard.jsx";
 
 const movie = { id: "x", title: "Test", releaseYear: 2020 };
 

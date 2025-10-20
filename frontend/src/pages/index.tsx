@@ -1,18 +1,18 @@
 import React, { useState, useMemo } from "react";
-import Layout from "../components/Layout";
-import MovieCard from "../components/MovieCard";
-import EmptyState from "../components/EmptyState";
-import SearchBar from "../components/SearchBar";
-import { loadMovies } from "../lib/fixtures";
+import Layout from "../components/Layout.tsx";
+import MovieCard from "../components/MovieCard.tsx";
+import EmptyState from "../components/EmptyState.tsx";
+import SearchBar from "../components/SearchBar.tsx";
+import { loadMovies } from "../lib/fixtures.ts";
 
 export default function Home() {
   const allMovies = loadMovies();
   const [query, setQuery] = useState("");
-  const movies = useMemo(() => {
+  const movies = useMemo((): import("../types/models.js").Movie[] => {
     if (!query) return allMovies;
     const q = query.toLowerCase();
     return allMovies.filter(
-      (m) =>
+      (m: import("../types/models.js").Movie) =>
         m.title.toLowerCase().includes(q) || String(m.releaseYear).includes(q)
     );
   }, [query, allMovies]);
@@ -32,7 +32,7 @@ export default function Home() {
         <EmptyState message={`No results for '${query}'.`} />
       ) : (
         <section className="movie-list">
-          {movies.map((m) => (
+          {movies.map((m: import("../types/models.js").Movie) => (
             <MovieCard key={m.id} movie={m} />
           ))}
         </section>

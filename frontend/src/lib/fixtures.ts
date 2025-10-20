@@ -1,5 +1,5 @@
 import moviesData from "../../fixtures/movies.json";
-import { Movie, Review } from "../types/models";
+import { Movie, Review } from "../types/models.js";
 
 export const movies: Movie[] = moviesData as Movie[];
 
@@ -77,3 +77,7 @@ export function validateMoviesFixture(
 
 // Run validation immediately (can be toggled off in production)
 export const moviesFixtureValidation = validateMoviesFixture();
+
+export function loadMovies(): Movie[] {
+  return movies;
+}

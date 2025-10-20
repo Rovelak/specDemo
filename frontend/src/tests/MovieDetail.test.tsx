@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import MovieDetail from "../components/MovieDetail";
+import MovieDetail from "../components/MovieDetail.jsx";
 
 const movie = {
   id: "x",
