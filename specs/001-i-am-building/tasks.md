@@ -54,7 +54,6 @@ Story goal: Provide a search input to filter movies by title (and optionally yea
 - [x] T023 Performance checks: verify images are optimized and page load meets SC-001; document steps in `specs/001-i-am-building/perf.md`
 - [x] T024 Add CI workflow file `.github/workflows/ci.yml` to run `npm ci`, `npm run build`, `npm run lint`, and `npm test` on pull requests
 - [x] T025 Prepare PR from branch `001-i-am-building` with all changes and link to spec and plan
-- [ ] T028 Add security headers & CSP documentation and host config in `specs/001-i-am-building/security.md` and include Vercel header settings
 - [x] T028 Add security headers & CSP documentation and host config in `specs/001-i-am-building/security.md` and include Vercel header settings
 - [x] T027 Add fixture validation utility and tests to ensure `movies.json` schema integrity
 
