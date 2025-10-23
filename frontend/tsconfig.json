@@ -5,6 +5,10 @@
     "jsx": "preserve",
     "module": "CommonJS",
     "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "ignoreDeprecations": "6.0",
     "allowImportingTsExtensions": true,
     // Removed ignoreDeprecations due to ts-jest TS5103 error; revisit when upgrading to TS 7

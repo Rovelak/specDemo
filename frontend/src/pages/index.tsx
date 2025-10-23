@@ -3,6 +3,7 @@ import Layout from "../components/Layout.tsx";
 import MovieCard from "../components/MovieCard.tsx";
 import EmptyState from "../components/EmptyState.tsx";
 import SearchBar from "../components/SearchBar.tsx";
+import { Button } from "../components/ui/index";
 import { loadMovies } from "../lib/fixtures.ts";
 
 export default function Home() {
@@ -28,6 +29,11 @@ export default function Home() {
   return (
     <Layout>
       <SearchBar onSearch={setQuery} />
+      <div style={{ marginTop: "0.5rem" }}>
+        <Button onClick={() => alert("Example button clicked")}>
+          Add movie
+        </Button>
+      </div>
       {movies.length === 0 ? (
         <EmptyState message={`No results for '${query}'.`} />
       ) : (
