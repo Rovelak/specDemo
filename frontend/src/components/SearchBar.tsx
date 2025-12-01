@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 
 type Props = {
   onSearch: (query: string) => void;
@@ -19,24 +22,31 @@ export default function SearchBar({
         e.preventDefault();
         onSearch(value.trim());
       }}
-      className="search-bar"
+      className="flex gap-2 w-full max-w-md"
     >
-      <label htmlFor="movie-search" className="visually-hidden">
+      <label htmlFor="movie-search" className="sr-only">
         Search movies
       </label>
-      <input
-        id="movie-search"
-        name="q"
-        type="text"
-        value={value}
-        placeholder={placeholder}
-        onChange={(e) => {
-          const v = e.target.value;
-          setValue(v);
-          onSearch(v.trim());
-        }}
-      />
-      <button type="submit">Search</button>
+      <div className="relative flex-1">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+        <Input
+          id="movie-search"
+          name="q"
+          type="text"
+          value={value}
+          placeholder={placeholder}
+          onChange={(e) => {
+            const v = e.target.value;
+            setValue(v);
+            onSearch(v.trim());
+          }}
+          className="pl-9"
+        />
+      </div>
+      <Button type="submit">
+        <Search className="h-4 w-4 mr-2" aria-hidden="true" />
+        Search
+      </Button>
     </form>
   );
 }
