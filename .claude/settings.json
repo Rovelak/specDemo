@@ -6,18 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.claude/hooks/log-prompt.sh"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "powershell -Command \"Import-Module BurntToast; New-BurntToastNotification -Text 'Claude Code', 'Processing completed' -AppLogo '~/.claude/claude.png' -Sound Default\""
+            "command": "powershell -ExecutionPolicy Bypass -File .claude/hooks/log-prompt.ps1"
           }
         ]
       }
